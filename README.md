@@ -2,6 +2,7 @@
 
 Desarrollador: Blas Alfonso Carofile
 Proyecto: Administración de presupuesto personal.
+Inicio: 7 Jun 2021
 
 ## Tecnologia del lado del Cliente
 
@@ -11,9 +12,9 @@ Se utilizaran hooks y funtional components
 Frontend: Boostrap y CSS.
 
 ## Diseño del proyecto a prototipar
-![Desripcion si no cxarga](https://github.com/blass1/alkemy_challenge_JS/blob/main/design/BOCETO.png)
+![Imagen del boceto a prototipar](https://github.com/blass1/alkemy_challenge_JS/blob/main/design/BOCETO.png)
 
 
 
-
+### Correo servidor de desarrollo.
 ### `npm start`
