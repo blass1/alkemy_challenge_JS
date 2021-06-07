@@ -1,8 +1,8 @@
 # Alkemy Challenge JS
 
-Desarrollador: Blas Alfonso Carofile
-Proyecto: Administración de presupuesto personal.
-Inicio: 7 Jun 2021
+* Desarrollador: Blas Alfonso Carofile
+* Proyecto: Administración de presupuesto personal.
+* Inicio: 7 Jun 2021
 
 ## Tecnologia del lado del Cliente
 
