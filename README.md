@@ -14,7 +14,14 @@ Frontend: Boostrap y CSS.
 ## Diseño del proyecto a prototipar
 ![Imagen del boceto a prototipar](https://github.com/blass1/alkemy_challenge_JS/blob/main/design/BOCETO.png)
 
+# Librerias complementarias
 
+* React-icons - Iconos para react
+* Json-server - Para testear el front con un backend de desarrollo
+* React-router-dom - Manejo de rutas 
 
-### Correo servidor de desarrollo.
+### Correr cliente de desarrollo.
 ### `npm start`
+
+### Correr backend de desarrollo.
+### `npm run server`

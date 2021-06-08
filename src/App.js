@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import Transacctions from './components/MoneyManager/Transactions';
 import './App.css';
+
+
+const transactionsTest = {
+    transactions : [
+      {
+        amount: 1900,
+        detail: "Compra de supermercado",
+        time: "Hoy",
+        type: true,
+        reminder: true,
+        id: 1
+      },
+    ]
+    
+  };
+
+  console.log(transactionsTest)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <div className="container">
+        {
+          transactionsTest.length > 0 ? (
+            <Transacctions 
+              transactions={transactionsTest.transactions}
+              // onDelete={deleteTransacction}
+              // onToggle={toggleReminder}
+            />)
+            : 'No transacctions to show'
+        }
+      
+      </div>
   );
 }
 
