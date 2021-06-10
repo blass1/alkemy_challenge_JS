@@ -7,7 +7,7 @@ const Transactions = ({ transactions }) => {
                 transactions.map((transaction) => (
                     <Transaction 
                         key={transaction.id} 
-                        transacction={transaction}
+                        transaction={transaction}
                     />
                 ))
             }    

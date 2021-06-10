@@ -1,31 +1,48 @@
 import Transacctions from './components/MoneyManager/Transactions';
+import {Header} from './components/MoneyManager/Header';
 import './App.css';
+import {useState, useEffect} from 'react';
+import AddTransaction from './components/MoneyManager/AddTransaction';
 
 
-const transactionsTest = {
-    transactions : [
-      {
-        amount: 1900,
-        detail: "Compra de supermercado",
-        time: "Hoy",
-        type: true,
-        reminder: true,
-        id: 1
-      },
-    ]
-    
-  };
-
-  console.log(transactionsTest)
 
 function App() {
+  
+  // MANEJO DE LAS TRANSACCIONES
+  const [transactions, setTransactions] = useState([])
+
+  useEffect(() => {
+    const getTransactions = async () => {
+      const transactionsFromServer = await fetchTransactions()
+      setTransactions(transactionsFromServer)
+    }
+  
+    getTransactions()
+  }, [])
+
+
+  const fetchTransactions = async() => {
+    const res = await fetch('http://localhost:5000/transactions')
+    const data = await res.json()
+    return data
+  }
+  
+  // MANEJO DEL HEADER
+  const [total, setTotal] = useState("$9500")
+  
+  
   return (
 
       <div className="container">
+        
+        <Header total={total}/>
+
+        <AddTransaction />
+
         {
-          transactionsTest.length > 0 ? (
+          transactions.length > 0 ? (
             <Transacctions 
-              transactions={transactionsTest.transactions}
+              transactions={transactions}
               // onDelete={deleteTransacction}
               // onToggle={toggleReminder}
             />)

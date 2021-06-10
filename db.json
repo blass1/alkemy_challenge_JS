@@ -1,11 +1,25 @@
 {
     "transactions": [
       {
-        "detail": "Ir al medico",
+        "detail": "Compra del supermercado",
         "time": "Hoy",
-        "reminder": true,
+        "extract": true,
         "id": 1,
         "amount" : 1500
+      },
+      {
+        "detail": "Cobro sueldo",
+        "time": "Hoy",
+        "extract": false,
+        "id": 2,
+        "amount" : 4000
+      },
+      {
+        "detail": "Visita al medico",
+        "time": "Hoy",
+        "extract": true,
+        "id": 3,
+        "amount" : 1300
       }
     ]
   }

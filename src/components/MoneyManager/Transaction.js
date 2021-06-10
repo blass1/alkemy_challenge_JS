@@ -1,21 +1,20 @@
 import React from 'react'
-import { FaTimes, FaEdit  } from 'react-icons/fa'
+import { FaTimes  } from 'react-icons/fa'
 
 const Transaction = ({ transaction }) => {
     return (
         <div
-        className={`transaction ${transaction.reminder ? 'reminder' : ''}`} 
+        className={`transaction ${transaction.extract ? 'extract' : ''}`} 
         >
            <h3>
-               {transaction.detail}{' '}
-               <FaEdit />
+               {"$ " + transaction.amount}{' '}
                <FaTimes
                    style={{color:'red', cursor:'pointer'}}
                />
            </h3>
            
-           <p>{transaction.time}</p>
-           console.log(transaction)
+           <p>{ transaction.time }</p>
+           <p>{ transaction.detail }</p>
            
        </div>
     )
