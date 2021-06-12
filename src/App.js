@@ -1,4 +1,5 @@
 import Transacctions from './components/MoneyManager/Transactions';
+import Transacction from './components/MoneyManager/Transaction';
 import {Header} from './components/MoneyManager/Header';
 import './App.css';
 import {useState, useEffect} from 'react';
@@ -21,30 +22,64 @@ function App() {
   }, [])
 
 
+  // TRAIGO LA DATA DEL BACKEND
   const fetchTransactions = async() => {
     const res = await fetch('http://localhost:5000/transactions')
     const data = await res.json()
     return data
   }
   
-  // MANEJO DEL HEADER
+  // AGREGO NUEVA DATA AL BACKEND
+  const newTransaction = async (transaction) => {
+    
+    setShowForm(!showForm)
+
+    const res = await fetch(
+      `http://localhost:5000/transactions`,
+      {
+        method: 'POST',
+        headers: {'Content-type' : 'application/json'},
+        body: JSON.stringify(transaction),
+      }
+    )
+    
+    // Como es una promesa uso el await
+    const data = await res.json()
+
+    setTransactions([...transactions, data])
+    
+    
+    
+
+  }
+
+
+
+  // HEADER
   const [total, setTotal] = useState("$9500")
+
+  // FORM
+  const [showForm, setShowForm] = useState(false)
   
   
   return (
 
       <div className="container">
         
-        <Header total={total}/>
+        <Header
+          total={total}
+          onClickNew={()=> setShowForm(!showForm)}
+          showTransactionForm={showForm}
+        />
 
-        <AddTransaction />
+        {showForm && <AddTransaction onNewTransaction={newTransaction} />}
+
+        <h2>Historial</h2>
 
         {
           transactions.length > 0 ? (
             <Transacctions 
               transactions={transactions}
-              // onDelete={deleteTransacction}
-              // onToggle={toggleReminder}
             />)
             : 'No transacctions to show'
         }

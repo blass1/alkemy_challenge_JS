@@ -1,6 +1,9 @@
 import Transaction from './Transaction'
 
 const Transactions = ({ transactions }) => {
+    
+    // const [usedMoney, setUsedMoney] = useState(initialState)
+    
     return (
         <>
             {

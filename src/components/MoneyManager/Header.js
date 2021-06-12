@@ -1,24 +1,17 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-export const Header = ({total, showAdd }) => {
+export const Header = ({total, showTransactionForm, onClickNew }) => {
 
 
     return (
         <header className='header'>
             <h1>{total}</h1>
             <Button
-                color={showAdd ? 'red' : 'green'}
-                text={showAdd ? 'Cerrar' : 'Nueva Transaccion'}
+                color={showTransactionForm ? '#A93226' : '#2980B9'}
+                text={showTransactionForm ? 'Cancelar' : ' Nueva'}
+                onClick={ onClickNew } 
             />
         </header>
     )
-}
-
-Header.defaultProps = {
-    total: '$4500',
-}
-
-Header.propTypes = {
-    total: PropTypes.string.isRequired,
 }

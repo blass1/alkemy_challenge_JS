@@ -1,25 +1,102 @@
 {
-    "transactions": [
-      {
-        "detail": "Compra del supermercado",
-        "time": "Hoy",
-        "extract": true,
-        "id": 1,
-        "amount" : 1500
-      },
-      {
-        "detail": "Cobro sueldo",
-        "time": "Hoy",
-        "extract": false,
-        "id": 2,
-        "amount" : 4000
-      },
-      {
-        "detail": "Visita al medico",
-        "time": "Hoy",
-        "extract": true,
-        "id": 3,
-        "amount" : 1300
-      }
-    ]
-  }
+  "transactions": [
+    {
+      "detail": "Compra del supermercado",
+      "time": "Hoy",
+      "extract": true,
+      "id": 1,
+      "amount": 1500
+    },
+    {
+      "detail": "Cobro sueldo",
+      "time": "Hoy",
+      "extract": false,
+      "id": 2,
+      "amount": 4000
+    },
+    {
+      "detail": "Visita al medico",
+      "time": "Hoy",
+      "extract": true,
+      "id": 3,
+      "amount": 1300
+    },
+    {
+      "amount": "123",
+      "time": "123",
+      "detail": "",
+      "extract": false,
+      "id": 4
+    },
+    {
+      "amount": "123",
+      "time": "123",
+      "detail": "",
+      "extract": true,
+      "id": 5
+    },
+    {
+      "amount": "150",
+      "time": "Ayer",
+      "detail": "Compra de comida",
+      "extract": true,
+      "id": 6
+    },
+    {
+      "amount": "asd",
+      "time": "asd",
+      "detail": "asd",
+      "extract": false,
+      "id": 7
+    },
+    {
+      "amount": "123",
+      "time": "123",
+      "detail": "123",
+      "extract": true,
+      "id": 8
+    },
+    {
+      "amount": "123",
+      "time": "123",
+      "detail": "123",
+      "extract": true,
+      "id": 9
+    },
+    {
+      "amount": "123",
+      "time": "123",
+      "detail": "123",
+      "extract": true,
+      "id": 10
+    },
+    {
+      "amount": "555",
+      "time": "555",
+      "detail": "555",
+      "extract": true,
+      "id": 11
+    },
+    {
+      "amount": "123",
+      "time": "123",
+      "detail": "123",
+      "extract": true,
+      "id": 12
+    },
+    {
+      "amount": "123",
+      "time": "13",
+      "detail": "123",
+      "extract": true,
+      "id": 13
+    },
+    {
+      "amount": "123",
+      "time": "132",
+      "detail": "",
+      "extract": false,
+      "id": 14
+    }
+  ]
+}

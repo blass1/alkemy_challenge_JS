@@ -7,13 +7,14 @@ const Transaction = ({ transaction }) => {
         className={`transaction ${transaction.extract ? 'extract' : ''}`} 
         >
            <h3>
-               {"$ " + transaction.amount}{' '}
+               {`$ ${transaction.extract ? "-" : ""} ${transaction.amount} ( ${ transaction.time } )`}
+               
                <FaTimes
                    style={{color:'red', cursor:'pointer'}}
                />
            </h3>
+           <p></p>
            
-           <p>{ transaction.time }</p>
            <p>{ transaction.detail }</p>
            
        </div>
